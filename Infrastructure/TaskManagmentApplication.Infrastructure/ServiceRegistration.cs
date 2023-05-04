@@ -15,6 +15,7 @@ namespace TaskManagmentApplication.Infrastructure
         {
             services.AddTransient<IExerciseService, ExerciseService>();
             services.AddTransient<IAuthService, AuthService>();
+            services.AddTransient<IImageService, ImageService>();
         }
     }
 }

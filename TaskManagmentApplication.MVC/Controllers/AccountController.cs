@@ -97,6 +97,7 @@ namespace TaskManagmentApplication.MVC.Controllers
             return View(user);
         }
 
+        [HttpGet]
         public async Task<IActionResult> LogOut()
         {
             await this.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

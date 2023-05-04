@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Add image";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row justify-content-center">
+    <div class="col-10">
+        <section>
+            <form method="post" asp-action="AddImage" asp-asp-controller="Images" enctype="multipart/form-data">
+               <input hidden name="taskid" value="@ViewBag.TaskId"/>
+                <div class="form-group">
+                    <input type="file" name="image" class="form-control" id="image" />
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+

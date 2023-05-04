@@ -36,4 +36,8 @@
     <ProjectReference Include="..\Infrastructure\TaskManagmentApplication.Persistence\TaskManagmentApplication.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

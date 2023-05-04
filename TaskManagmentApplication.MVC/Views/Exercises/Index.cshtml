@@ -28,6 +28,8 @@
                     <td>@item.Enddate</td>
                     <td>@item.Description</td>
                     <td>@item.Status</td>
+
+                    <td><a class="btn btn-secondary" href="@Url.Action("TaskDetails", "Exercises", new { id = item.Taskid })">Details</a></td>
                     <td><a class="btn btn-secondary" href="@Url.Action("EditTask", "Exercises", new { id = item.Taskid })">Edit Task</a></td>
                     <td><a class="btn btn-danger" href="@Url.Action("DeleteTask", "Exercises", new { id = item.Taskid })">Delete Task</a></td>
                 </tr>

@@ -1,18 +1,21 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagmentApplication.Application.Interfaces.Service;
+using TaskManagmentApplication.Application.Services;
 using TaskManagmentApplication.Domain.Entities;
 
 namespace TaskManagmentApplication.MVC.Controllers
 {
-    [Authorize("Supervisor")]
+    [Authorize]
     public class ExercisesController : Controller
     {
         private readonly IExerciseService _exerciseService;
+        private readonly IImageService _imageService;
 
-        public ExercisesController(IExerciseService exerciseService)
+        public ExercisesController(IExerciseService exerciseService, IImageService imageService)
         {
             _exerciseService = exerciseService;
+            _imageService = imageService;
         }
 
         [HttpGet]
@@ -71,6 +74,20 @@ namespace TaskManagmentApplication.MVC.Controllers
                 return RedirectToAction("Index");
             }
             return View(exercise);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> TaskDetails(int id)
+        {
+            var task = await _exerciseService.GetTaskByIdAsync(id);
+            if (task != null)
+            {
+                ViewBag.Images =await _imageService.GetAllImagesAsync(id);
+
+                return View(task);
+
+            }
+            return View("Index");
         }
     }
 }

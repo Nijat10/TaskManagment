@@ -15,6 +15,7 @@ namespace TaskManagmentApplication.Persistence
         {
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IImageRepository, ImageRepository>();
         }
     }
 }

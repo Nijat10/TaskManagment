@@ -50,7 +50,6 @@ namespace TaskManagmentApplication.Persistence.DbContexts
                 entity.Property(e => e.Imageid).HasColumnName("IMAGEID");
 
                 entity.Property(e => e.Imageurl)
-                    .HasMaxLength(200)
                     .HasColumnName("IMAGEURL");
 
                 entity.Property(e => e.Taskid).HasColumnName("TASKID");
