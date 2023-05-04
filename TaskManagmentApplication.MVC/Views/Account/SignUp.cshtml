@@ -5,38 +5,55 @@
 }
 
 <form method="post" asp-action="SignUp">
-    <div class="form-floating mb-3">
+    <div class="form-group">
         <label asp-for="Firstname"></label>
         <input type="text" asp-for="Firstname" class="form-control" autocomplete="off" />
         <span asp-validation-for="Firstname" class="text-danger"></span>
     </div>
-    <div class="form-floating mb-3">
+    <div class="form-group">
         <label asp-for="Lastname"></label>
         <input type="text" asp-for="Lastname" class="form-control" autocomplete="off" />
         <span asp-validation-for="Lastname" class="text-danger"></span>
     </div>
-    <div class="form-floating mb-3">
-        <select asp-for="Role" class="form-select">
+    <div class="form-group">
+        <label asp-for="Role"></label>
+        <select asp-for="Role" class="form-control">
             <option value="Operator">Operator</option>
             <option value="Supervisor">Supervisor</option>
             <option value="Administrator">Administrator</option>
         </select>
     </div>
-    <div class="form-floating mb-3">
+    <div class="form-group">
         <label asp-for="Email"></label>
         <input type="email" asp-for="Email" class="form-control" autocomplete="off" />
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
-    <div class="form-floating mb-3">
+    <div class="form-group">
         <label asp-for="Password"></label>
         <input type="password" asp-for="Password" class="form-control" autocomplete="off" />
         <span asp-validation-for="Password" class="text-danger"></span>
     </div>
-    <div class="form-floating mb-3">
+    <div class="form-group">
         <label asp-for="Confirmpassword"></label>
         <input type="text" asp-for="Confirmpassword" class="form-control" autocomplete="off" />
         <span asp-validation-for="Confirmpassword" class="text-danger"></span>
     </div>
+    <dnt-captcha asp-captcha-generator-max="999999"
+                 asp-captcha-generator-min="111111"
+                 asp-captcha-generator-language="English"
+                 asp-captcha-generator-display-mode="ShowDigits"
+                 asp-use-relative-urls="true"
+                 asp-placeholder="Enter Security code"
+                 asp-validation-error-message="Please enter the security code."
+                 asp-font-name="Tahoma"
+                 asp-font-size="20"
+                 asp-fore-color="#333333"
+                 asp-back-color="#ccc"
+                 asp-text-box-class="text-box form-control"
+                 asp-text-box-template="<span class='input-group-prepend'><span class='form-group-text'></span></span>{0}"
+                 asp-validation-message-class="text-danger"
+                 asp-refresh-button-class="fas fa-redo btn-sm"
+                 asp-use-noise="false" />
     <div>
         <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
     </div>

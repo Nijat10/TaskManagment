@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "TaskManagmentApplication.MVC/1.0.0": {
         "dependencies": {
+          "DNTCaptcha.Core": "4.2.0",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
@@ -61,6 +62,17 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.6.0.0",
             "fileVersion": "1.600.22.20503"
+          }
+        }
+      },
+      "DNTCaptcha.Core/4.2.0": {
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/DNTCaptcha.Core.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
           }
         }
       },
@@ -2527,6 +2539,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "DNTCaptcha.Core/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-quTgknkp6TSTV3rMs4PRSGvDXIUxYYrXa9OhdrUKUJvyCr+y7quzSrZ+Pq6wkl9+TE8bSeWbgap5Fa+777qXuA==",
+      "path": "dntcaptcha.core/4.2.0",
+      "hashPath": "dntcaptcha.core.4.2.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

@@ -1,3 +1,4 @@
+using DNTCaptcha.Core;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -35,6 +36,11 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+builder.Services.AddDNTCaptcha(options =>
+        options.UseCookieStorageProvider()
+            .ShowThousandsSeparators(false).WithEncryptionKey("123456")
+    );
 
 var app = builder.Build();
 

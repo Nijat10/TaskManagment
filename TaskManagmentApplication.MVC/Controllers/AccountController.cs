@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using DNTCaptcha.Core;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -78,6 +79,10 @@ namespace TaskManagmentApplication.MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateDNTCaptcha(
+            ErrorMessage = "Please Enter Valid Captcha",
+            CaptchaGeneratorLanguage = Language.English,
+            CaptchaGeneratorDisplayMode = DisplayMode.ShowDigits)]
         public async Task<IActionResult> SignUp(User user)
         {
             if (ModelState.IsValid)
