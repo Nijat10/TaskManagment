@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\bin\Debug\net7.0\TaskManagmentApplication.Domain.deps.json
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\bin\Debug\net7.0\TaskManagmentApplication.Domain.runtimeconfig.json
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\bin\Debug\net7.0\TaskManagmentApplication.Domain.dll
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\bin\Debug\net7.0\TaskManagmentApplication.Domain.pdb
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.AssemblyInfo.cs
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.dll
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\refint\TaskManagmentApplication.Domain.dll
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.pdb
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\TaskManagmentApplication.Domain.genruntimeconfig.cache
+C:\Users\User\Desktop\TaskManagmentApplication\TaskManagmentApplication\Core\TaskManagmentApplication.Domain\obj\Debug\net7.0\ref\TaskManagmentApplication.Domain.dll

@@ -1,0 +1,98 @@
+/* _content/TaskManagmentApplication.MVC/Views/Shared/_AuthLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-i7jhic1zpv] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-i7jhic1zpv] {
+  color: #0077cc;
+}
+
+.btn-primary[b-i7jhic1zpv] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-i7jhic1zpv], .nav-pills .show > .nav-link[b-i7jhic1zpv] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-i7jhic1zpv] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-i7jhic1zpv] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-i7jhic1zpv] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-i7jhic1zpv] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-i7jhic1zpv] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/TaskManagmentApplication.MVC/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-dqghglz7dd] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-dqghglz7dd] {
+  color: #0077cc;
+}
+
+.btn-primary[b-dqghglz7dd] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-dqghglz7dd], .nav-pills .show > .nav-link[b-dqghglz7dd] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-dqghglz7dd] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-dqghglz7dd] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-dqghglz7dd] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-dqghglz7dd] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-dqghglz7dd] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

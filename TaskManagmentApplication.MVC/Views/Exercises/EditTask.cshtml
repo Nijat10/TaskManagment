@@ -1,0 +1,39 @@
+﻿@model Exercise
+@{
+    ViewData["Title"] = "Edit Task";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-action="EditTask">
+    <div class="form-floating mb-3" hidden>
+        <label asp-for="Taskid"></label>
+        <input type="text" asp-for="Taskid" class="form-control" autocomplete="off" />
+    </div>
+    <div class="form-floating mb-3">
+        <label asp-for="Startdate"></label>
+        <input type="date" asp-for="Startdate" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Startdate" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <label asp-for="Enddate"></label>
+        <input type="date" asp-for="Enddate" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Enddate" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <select asp-for="Status" class="form-select">
+            <option value="new">Yeni</option>
+            <option value="progress">İcradadır</option>
+            <option value="done">Həll olunub</option>
+        </select>
+    </div>
+    <div class="form-floating mb-3">
+        <label asp-for="Description"></label>
+        <input type="text" asp-for="Description" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div>
+        <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+    </div>
+</form>
+
+

@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome !</h1>
+    @if (HttpContextAccessor.HttpContext.Session.GetString("Role") =="Supervisor")
+    {
+        <a href="/Exercises/Index">All Tasks</a>
+    }
+
+    @if (HttpContextAccessor.HttpContext.Session.GetString("Role") == "Administrator")
+    {
+        <a href="/Owners/Index">Users</a>
+    }
+
+</div>

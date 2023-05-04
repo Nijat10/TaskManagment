@@ -1,0 +1,46 @@
+﻿@model User
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<form method="post" asp-action="SignUp">
+    <div class="form-floating mb-3">
+        <label asp-for="Firstname"></label>
+        <input type="text" asp-for="Firstname" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Firstname" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <label asp-for="Lastname"></label>
+        <input type="text" asp-for="Lastname" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Lastname" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <select asp-for="Role" class="form-select">
+            <option value="Operator">Operator</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Administrator">Administrator</option>
+        </select>
+    </div>
+    <div class="form-floating mb-3">
+        <label asp-for="Email"></label>
+        <input type="email" asp-for="Email" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <label asp-for="Password"></label>
+        <input type="password" asp-for="Password" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <label asp-for="Confirmpassword"></label>
+        <input type="text" asp-for="Confirmpassword" class="form-control" autocomplete="off" />
+        <span asp-validation-for="Confirmpassword" class="text-danger"></span>
+    </div>
+    <div>
+        <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+    </div>
+</form>
+
+
+
