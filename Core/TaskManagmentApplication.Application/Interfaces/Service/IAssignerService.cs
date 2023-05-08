@@ -10,5 +10,6 @@ namespace TaskManagmentApplication.Application.Interfaces.Service
     public interface IAssignerService
     {
         Task<List<User>> GetAssignersbyTaskId(int taskID);
+        Task AddAssignerTask(int taskId, int userId);
     }
 }

@@ -6,7 +6,7 @@ using TaskManagmentApplication.Domain.Entities;
 
 namespace TaskManagmentApplication.MVC.Controllers
 {
-    [Authorize(Roles ="Administrator")]
+    [Authorize(Roles = "Administrator")]
     public class OwnersController : Controller
     {
         private readonly IAuthService authService;
@@ -26,6 +26,7 @@ namespace TaskManagmentApplication.MVC.Controllers
         public async Task<IActionResult> EditOwner(string email)
         {
             var selected = await authService.GetUserByEmailAsync(email);
+
             if (selected != null)
             {
                 return View(selected);
@@ -49,20 +50,14 @@ namespace TaskManagmentApplication.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> EditOwner(User user)
         {
-            var selectedUser =await authService.GetUserByEmailAsync((string)user.Email);
+            var selectedUser = await authService.GetUserByEmailAsync((string)user.Email);
 
+            selectedUser.Firstname = user.Firstname;
+            selectedUser.Lastname = user.Lastname;
+            selectedUser.Role = user.Role;
 
-            user.Email = selectedUser.Email;
-            user.Id = selectedUser.Id;
-            user.Password = selectedUser.Confirmpassword;
-            user.Confirmpassword = selectedUser.Confirmpassword;
-
-            if (ModelState.IsValid)
-            {
-                await authService.EditUserAsync(selectedUser);
-                return RedirectToAction("Index");
-            }
-            return View(user);
+            await authService.EditUserAsync(selectedUser);
+            return RedirectToAction("Index");
         }
     }
 }

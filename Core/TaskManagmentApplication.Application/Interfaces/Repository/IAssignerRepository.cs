@@ -10,5 +10,6 @@ namespace TaskManagmentApplication.Application.Interfaces.Repository
     public interface IAssignerRepository
     {
         Task<List<User>> GetAssignersbyTaskId(int taskID);
+        Task AddAssignerTask(int taskId, int userId);
     }
 }

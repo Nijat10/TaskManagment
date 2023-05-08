@@ -47,7 +47,12 @@
                         <p class="mb-0">Owners</p>
                     </div>
                     <div class="col-sm-9">
-                        <p class="text-muted mb-0">@ViewBag.OwnerNames</p>
+                        <ul>
+                            @foreach (var item in Model.Taskassigns)
+                            {
+                                <li>@item.User.Email</li>
+                            }
+                        </ul>
                     </div>
                 </div>
                 <hr>
@@ -64,6 +69,18 @@
         </div>
     </div>
 </div>
+
+<form asp-controller="TaskOwners" asp-action="AssignUser" method="post">
+    <input type="hidden" name="taskId" value="@Model.Taskid" />
+    <label for="assignerId">Select user:</label>
+    <select name="assignerId" id="assignerId">
+        @foreach (var assigner in ViewBag.Assigners)
+        {
+            <option value="@assigner.Id">@assigner.Email</option>
+        }
+    </select>
+    <button type="submit">Assign</button>
+</form>
 
 <br />
 <a asp-action="AddImage" asp-controller="Images" asp-route-id="@Model.Taskid" class="btn btn-success">Add new image</a>

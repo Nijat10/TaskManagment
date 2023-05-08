@@ -6,7 +6,7 @@ using TaskManagmentApplication.Domain.Entities;
 
 namespace TaskManagmentApplication.MVC.Controllers
 {
-    [Authorize(Roles = "Supervisor")]
+    [Authorize]
     public class ImagesController : Controller
     {
         private readonly IImageService _imageService;

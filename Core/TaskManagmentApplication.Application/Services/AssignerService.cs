@@ -17,9 +17,15 @@ namespace TaskManagmentApplication.Application.Services
         {
             _assignerRepository = assignerRepository;
         }
+
+        public async Task AddAssignerTask(int taskId, int userId)
+        {
+           await _assignerRepository.AddAssignerTask(taskId, userId);
+        }
+
         public async Task<List<User>> GetAssignersbyTaskId(int taskID)
         {
-            return await _assignerRepository.GetAssignersbyTaskId(taskID);    
+            return await _assignerRepository.GetAssignersbyTaskId(taskID);
         }
     }
 }

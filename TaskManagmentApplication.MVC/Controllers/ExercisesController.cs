@@ -12,12 +12,14 @@ namespace TaskManagmentApplication.MVC.Controllers
         private readonly IExerciseService _exerciseService;
         private readonly IAssignerService _assignerService;
         private readonly IImageService _imageService;
+        private readonly IAuthService _authService;
 
-        public ExercisesController(IExerciseService exerciseService, IImageService imageService, IAssignerService assignerService)
+        public ExercisesController(IExerciseService exerciseService, IImageService imageService, IAssignerService assignerService, IAuthService authService)
         {
             _exerciseService = exerciseService;
             _imageService = imageService;
             _assignerService = assignerService;
+            _authService = authService;
         }
 
         [HttpGet]
@@ -92,10 +94,13 @@ namespace TaskManagmentApplication.MVC.Controllers
                     ownerNames = string.Join(',', owners.Select(o => o.Email));
                 }
 
+                ViewBag.Assigners = await _authService.GetAllUsersAsync();
                 ViewBag.OwnerNames = ownerNames;
                 return View(task);
 
             }
+
+            ViewBag.Assigners = (await _authService.GetAllUsersAsync()).ToList();
             return View("Index");
         }
     }

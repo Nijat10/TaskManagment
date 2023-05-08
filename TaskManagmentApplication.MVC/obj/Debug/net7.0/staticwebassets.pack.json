@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\TaskManagment\\TaskManagmentApplication.MVC\\wwwroot\\images\\images.jpg",
-      "PackagePath": "staticwebassets\\images\\images.jpg"
-    },
-    {
       "Id": "C:\\Users\\User\\Desktop\\TaskManagment\\TaskManagmentApplication.MVC\\wwwroot\\images\\task-concept-people-letters-icons-flat-vector-illustration-isolated-white-background-task-concept-people-letters-139612201.jpg",
       "PackagePath": "staticwebassets\\images\\task-concept-people-letters-icons-flat-vector-illustration-isolated-white-background-task-concept-people-letters-139612201.jpg"
     },

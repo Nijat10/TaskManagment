@@ -28,6 +28,13 @@ namespace TaskManagmentApplication.Persistence.Repositories
         {
             _context.Images.Remove(image);
             await _context.SaveChangesAsync();
+
+            var filePath = Path.Combine(
+                      Directory.GetCurrentDirectory(), "wwwroot/images/")+image.Imageurl;
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
         }
 
         public async Task<List<Image>> GetAllImagesAsync(int taskId)

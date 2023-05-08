@@ -47,7 +47,8 @@ namespace TaskManagmentApplication.MVC.Controllers
                 List<Claim> claims = new List<Claim>()
                 {
                     new Claim(ClaimTypes.NameIdentifier, loginVM.UserName),
-                    new Claim(ClaimTypes.Role, user.Role)
+                    new Claim(ClaimTypes.Role, user.Role),
+                    new Claim("UserID", user.Id.ToString())
                 };
 
                 ClaimsIdentity identity = new ClaimsIdentity(claims,

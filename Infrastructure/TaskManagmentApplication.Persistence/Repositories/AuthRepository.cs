@@ -37,12 +37,8 @@ namespace TaskManagmentApplication.Persistence.Repositories
 
         public async Task EditUserAsync(User user)
         {
-            var selected = await applicationDbContext.Users.FirstOrDefaultAsync(e => e.Email == user.Email);
-            if (selected != null)
-            {
-                applicationDbContext.Users.Update(selected);
-                await applicationDbContext.SaveChangesAsync();
-            }
+            applicationDbContext.Users.Update(user);
+            await applicationDbContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<User>> GetAllUsersAsync()

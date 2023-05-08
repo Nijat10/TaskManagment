@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F9crUZ4wo0C6WXGmd0jLHlOO34Py1XbrhOxGVQyB16s=",
+  "Hash": "W83OMkGWCB2xoneC0znUy7JssaOx8ZLr6vi+DpBee1A=",
   "Source": "TaskManagmentApplication.MVC",
   "BasePath": "_content/TaskManagmentApplication.MVC",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\User\\Desktop\\TaskManagment\\TaskManagmentApplication.MVC\\wwwroot\\images\\images.jpg",
-      "SourceId": "TaskManagmentApplication.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\Desktop\\TaskManagment\\TaskManagmentApplication.MVC\\wwwroot\\",
-      "BasePath": "_content/TaskManagmentApplication.MVC",
-      "RelativePath": "images/images.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\images.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\TaskManagment\\TaskManagmentApplication.MVC\\wwwroot\\images\\task-concept-people-letters-icons-flat-vector-illustration-isolated-white-background-task-concept-people-letters-139612201.jpg",

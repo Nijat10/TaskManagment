@@ -18,9 +18,24 @@ namespace TaskManagmentApplication.Persistence.Repositories
         {
             this.applicationDbContext = applicationDbContext;
         }
+
+        public async Task AddAssignerTask(int taskId, int userId)
+        {
+            var task = applicationDbContext.Exercises
+            .Include(t => t.Taskassigns)
+        .Single(t => t.Taskid == taskId);
+
+            var assigner = applicationDbContext.Users
+            .Single(a => a.Id == userId);
+
+            task.Taskassigns.Add(new Taskassign { Task = task, User = assigner });
+
+            await applicationDbContext.SaveChangesAsync();
+        }
+
         public async Task<List<User>> GetAssignersbyTaskId(int taskID)
         {
-            var assigners =await applicationDbContext.Taskassigns
+            var assigners = await applicationDbContext.Taskassigns
                               .Where(ta => ta.Taskid == taskID)
                               .Include(ta => ta.User)
                               .Select(ta => ta.User)
