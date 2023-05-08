@@ -3,7 +3,9 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>Tasks
+
+<h1>
+    Tasks
 </h1>
 <a class="btn btn-success" asp-action="CreateTask">Create new task</a>
 @if (Model.Count > 0)
@@ -22,12 +24,15 @@
         <tbody>
             @foreach (var item in Model)
             {
+
+                var status = "New";
+                status = item.Status == 1 ? "In Progress" : "Done";
                 <tr>
                     <td>@item.Taskid</td>
                     <td>@item.Startdate</td>
                     <td>@item.Enddate</td>
                     <td>@item.Description</td>
-                    <td>@item.Status</td>
+                    <td>@status</td>
 
                     <td><a class="btn btn-secondary" href="@Url.Action("TaskDetails", "Exercises", new { id = item.Taskid })">Details</a></td>
                     <td><a class="btn btn-secondary" href="@Url.Action("EditTask", "Exercises", new { id = item.Taskid })">Edit Task</a></td>

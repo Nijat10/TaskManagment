@@ -10,12 +10,14 @@ namespace TaskManagmentApplication.MVC.Controllers
     public class ExercisesController : Controller
     {
         private readonly IExerciseService _exerciseService;
+        private readonly IAssignerService _assignerService;
         private readonly IImageService _imageService;
 
-        public ExercisesController(IExerciseService exerciseService, IImageService imageService)
+        public ExercisesController(IExerciseService exerciseService, IImageService imageService, IAssignerService assignerService)
         {
             _exerciseService = exerciseService;
             _imageService = imageService;
+            _assignerService = assignerService;
         }
 
         [HttpGet]
@@ -82,8 +84,15 @@ namespace TaskManagmentApplication.MVC.Controllers
             var task = await _exerciseService.GetTaskByIdAsync(id);
             if (task != null)
             {
-                ViewBag.Images =await _imageService.GetAllImagesAsync(id);
+                ViewBag.Images = await _imageService.GetAllImagesAsync(id);
+                var owners = await _assignerService.GetAssignersbyTaskId(id);
+                string ownerNames = string.Empty;
+                if (owners != null && owners.Count > 0)
+                {
+                    ownerNames = string.Join(',', owners.Select(o => o.Email));
+                }
 
+                ViewBag.OwnerNames = ownerNames;
                 return View(task);
 
             }
